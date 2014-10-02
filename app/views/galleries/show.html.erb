@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gallery.name %>
+  <strong>DES:</strong>
+  <%= @gallery.des %>
+  
+  <% @gallery.images.each do |img| %>
+      <tr>
+        <%= image_tag img.avatar_url.to_s %>
+      </tr>
+    <% end %>
+</p>
+
